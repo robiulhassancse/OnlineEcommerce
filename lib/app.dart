@@ -13,7 +13,7 @@ class OnlineEcommerce extends StatefulWidget {
 class _OnlineEcommerceState extends State<OnlineEcommerce> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: OnlineEcommerceTheme.lightTheme,
       darkTheme: OnlineEcommerceTheme.darkTheme,
