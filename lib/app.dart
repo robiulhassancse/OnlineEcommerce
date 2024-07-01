@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_commerce/features/screens/onboarding_screen.dart';
+import 'package:online_commerce/theme/theme.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class OnlineEcommerce extends StatefulWidget {
+  const OnlineEcommerce({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<OnlineEcommerce> createState() => _OnlineEcommerceState();
 }
 
-class _MyAppState extends State<MyApp> {
+class _OnlineEcommerceState extends State<OnlineEcommerce> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      themeMode: ThemeMode.system,
+      theme: OnlineEcommerceTheme.lightTheme,
+      darkTheme: OnlineEcommerceTheme.darkTheme,
+      home: const OnBoardingScreen(),
+    );
   }
 }
