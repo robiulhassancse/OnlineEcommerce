@@ -35,7 +35,7 @@ class OnlineEcommerceTheme{
       ),
 
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(vertical: 16,horizontal: 32),
+      contentPadding: const EdgeInsets.symmetric(vertical: 24,horizontal: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
         borderSide: BorderSide(

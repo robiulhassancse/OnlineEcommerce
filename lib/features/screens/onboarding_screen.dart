@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_commerce/controller/onboarding_controller.dart';
-import 'package:online_commerce/widgets/bottom_dotted_nav.dart';
-import 'package:online_commerce/widgets/list_of_onboard_image.dart';
-import 'package:online_commerce/widgets/onboarding_next_button.dart';
-import 'package:online_commerce/widgets/onboarding_skip_button.dart';
-import 'package:online_commerce/widgets/onboardpage.dart';
+import 'package:online_commerce/features/screens/widgets/bottom_dotted_nav.dart';
+import 'package:online_commerce/features/screens/widgets/list_of_onboard_image.dart';
+import 'package:online_commerce/features/screens/widgets/onboarding_next_button.dart';
+import 'package:online_commerce/features/screens/widgets/onboarding_skip_button.dart';
+import 'package:online_commerce/features/screens/widgets/onboardpage.dart';
+
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             PageView(
               controller: controller.pageController,
               onPageChanged: controller.updatePageIndicator,
-              children: const [
+              children:  const [
                 OnBoardingPage(
                   image: OnboardImageList.onBoardingImage1,
                   title: OnboardImageList.onBoardingTitle1,
