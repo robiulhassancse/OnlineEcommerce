@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:online_commerce/features/screens/forget_password_screen.dart';
+import 'package:online_commerce/features/screens/main_bottom_nav_screen.dart';
 import 'package:online_commerce/features/screens/sign_up_screen.dart';
 import 'package:online_commerce/theme/theme.dart';
 import 'package:online_commerce/utility/app_color.dart';
@@ -57,7 +59,9 @@ class _LoginFormState extends State<LoginForm> {
                 ],
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(()=> const ForgetPasswordScreen());
+                },
                 child: Text('Forget Password',
                     style: OnlineEcommerceTheme.lightTheme.textTheme.bodySmall),
               ),
@@ -68,7 +72,7 @@ class _LoginFormState extends State<LoginForm> {
             width: double.maxFinite,
             child: ElevatedButton(
               onPressed: () {
-                Get.to(()=> const SignUpScreen());
+                Get.to(()=> const MainBottomNavScreen());
               },
               child: const Text('Sign In'),
             ),
