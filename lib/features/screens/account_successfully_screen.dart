@@ -1,39 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:online_commerce/features/screens/email_verification_screen.dart';
-// import 'package:online_commerce/features/screens/widgets/list_of_onboard_image.dart';
-// import 'package:online_commerce/features/screens/widgets/verify_email_address_screen.dart';
-//
-// class AccountSuccessFullyScreen extends StatefulWidget {
-//   const AccountSuccessFullyScreen({super.key});
-//
-//   @override
-//   State<AccountSuccessFullyScreen> createState() =>
-//       _AccountSuccessFullyScreenState();
-// }
-//
-// class _AccountSuccessFullyScreenState extends State<AccountSuccessFullyScreen> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: SingleChildScrollView(
-//         child: Padding(
-//           padding: const EdgeInsets.all(32.0),
-//           child: Column(
-//             children: [
-//               SizedBox(height: 80,),
-//               VerifyEmailAddressScreen(
-//                   image: OnboardImageList.onBoardingImage2,
-//                   title: 'Your account successfully created!',
-//                   description: 'Welcome to Your Ultimate Shopping Destination: Your Account is Created.Unleash the Joy of Seamless Online Shopping!',
-//                   onPress: (){},
-//                   elevatedButtonText: 'Continue'),
-//             ],
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
 
 import 'package:flutter/material.dart';
 import 'package:online_commerce/features/screens/widgets/list_of_onboard_image.dart';
