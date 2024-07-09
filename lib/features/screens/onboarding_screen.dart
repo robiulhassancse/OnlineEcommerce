@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_commerce/controller/onboarding_controller.dart';
-import 'package:online_commerce/features/screens/widgets/bottom_dotted_nav.dart';
+import 'package:online_commerce/features/screens/widgets/home/bottom_dotted_nav.dart';
 import 'package:online_commerce/features/screens/widgets/list_of_onboard_image.dart';
 import 'package:online_commerce/features/screens/widgets/onboarding_next_button.dart';
 import 'package:online_commerce/features/screens/widgets/onboarding_skip_button.dart';
