@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:online_commerce/features/screens/widgets/list_of_onboard_image.dart';
 
 class ProductCategory extends StatelessWidget {
   const ProductCategory({

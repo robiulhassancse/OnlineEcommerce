@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:online_commerce/features/screens/tab_bar_screen.dart';
 import 'package:online_commerce/features/screens/widgets/home/app_bar_home_screen.dart';
 import 'package:online_commerce/features/screens/widgets/clip_path_background.dart';
+import 'package:online_commerce/features/screens/widgets/home/home_category_list.dart';
 import 'package:online_commerce/features/screens/widgets/home/product_category.dart';
 import 'package:online_commerce/features/screens/widgets/home/home_carousel_slider.dart';
 import 'package:online_commerce/features/screens/widgets/home/home_popular_categories.dart';
@@ -38,33 +39,16 @@ class _HomeScreenState extends State<HomeScreen> {
                       SliderImageList.slider2 ?? '',
                       SliderImageList.slider1 ?? '',
                     ]),
-                    SizedBox(
-                      height: 600,
-                      // width: 500,
-                      child:  GridView.builder(
-                          itemCount: 10,
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisSpacing: 10,
-                        mainAxisSpacing: 10,
-                        // mainAxisExtent: 10,
-                        crossAxisCount: 2,
-                            childAspectRatio: 0.64
-                      ),
-
-                          itemBuilder: (context,index){
-                        return  const Expanded(child: ProductCategory());
-                      })
-                        ),
+                    const HomeCategoryList(),
                   ]),
                 ),
               ],
             ),
-            SizedBox(height: 400,child: TabBarScreen()),
           ],
         ),
       ),
     );
   }
 }
+
+
