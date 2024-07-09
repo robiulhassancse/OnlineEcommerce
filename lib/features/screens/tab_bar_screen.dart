@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:online_commerce/features/screens/widgets/home/app_bar.dart';
 import 'package:online_commerce/features/screens/widgets/home/brand_card.dart';
 import 'package:online_commerce/features/screens/widgets/home/home_category_list.dart';
-import 'package:online_commerce/features/screens/widgets/home/product_category.dart';
 import 'package:online_commerce/features/screens/widgets/home/sports_brand_card.dart';
 import 'package:online_commerce/features/screens/widgets/home/store_search_bar.dart';
 import 'package:online_commerce/utility/app_color.dart';
