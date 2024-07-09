@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_commerce/features/screens/tab_bar_screen.dart';
 import 'package:online_commerce/features/screens/widgets/home/app_bar_home_screen.dart';
 import 'package:online_commerce/features/screens/widgets/clip_path_background.dart';
 import 'package:online_commerce/features/screens/widgets/home/product_category.dart';
@@ -37,7 +38,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       SliderImageList.slider2 ?? '',
                       SliderImageList.slider1 ?? '',
                     ]),
-                    const SizedBox(height: 30),
                     SizedBox(
                       height: 600,
                       // width: 500,
@@ -56,11 +56,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           itemBuilder: (context,index){
                         return  const Expanded(child: ProductCategory());
                       })
-                        )
+                        ),
                   ]),
                 ),
               ],
             ),
+            SizedBox(height: 400,child: TabBarScreen()),
           ],
         ),
       ),

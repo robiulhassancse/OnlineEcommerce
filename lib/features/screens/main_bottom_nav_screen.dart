@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:online_commerce/controller/main_bottom_nav_controller.dart';
 import 'package:online_commerce/features/screens/home_screen.dart';
 import 'package:online_commerce/features/screens/login_screen.dart';
+import 'package:online_commerce/features/screens/tab_bar_screen.dart';
 import 'package:online_commerce/utility/app_color.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
@@ -17,7 +18,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
 
   final List<Widget> _screens =[
     const HomeScreen(),
-    const HomeScreen(),
+    const TabBarScreen(),
     const HomeScreen(),
     const LoginScreen(),
   ];
