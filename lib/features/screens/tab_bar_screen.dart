@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:online_commerce/features/screens/widgets/home/app_bar.dart';
+import 'package:online_commerce/features/screens/widgets/home/app_bar_preferred_size_widget.dart';
 import 'package:online_commerce/features/screens/widgets/home/brand_card.dart';
-import 'package:online_commerce/features/screens/widgets/home/home_category_list.dart';
-import 'package:online_commerce/features/screens/widgets/home/sports_brand_card.dart';
 import 'package:online_commerce/features/screens/widgets/home/store_search_bar.dart';
-import 'package:online_commerce/utility/app_color.dart';
+import 'package:online_commerce/features/screens/widgets/home/tab_bar_preferred_size_widget.dart';
+import 'package:online_commerce/features/screens/widgets/store_all_category_list.dart';
 
 class TabBarScreen extends StatefulWidget {
   const TabBarScreen({super.key});
@@ -21,8 +20,11 @@ class _TabBarScreenState extends State<TabBarScreen> {
       length: 5,
       child: Scaffold(
         appBar: EAppBar(
-          showBackArrow: true,
-          title: const Text('Store'),
+          showBackArrow: false,
+          title: const Text(
+            'Store',
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+          ),
           actions: [
             Stack(
               children: [
@@ -59,14 +61,20 @@ class _TabBarScreenState extends State<TabBarScreen> {
               SliverAppBar(
                 pinned: true,
                 floating: true,
-                expandedHeight: 420,
+                expandedHeight: 440,
+                automaticallyImplyLeading: false,
                 flexibleSpace: Padding(
                   padding: const EdgeInsets.all(16.0),
                   child: ListView(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
                     children: [
+                      SizedBox(
+                        height: 30,
+                      ),
                       const StoreSearchBar(),
                       const SizedBox(
-                        height: 30,
+                        height: 20,
                       ),
                       const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -79,7 +87,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: 30,
+                        height: 20,
                       ),
                       SizedBox(
                         height: 320,
@@ -92,7 +100,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
                                     // mainAxisSpacing: 10,
                                     // crossAxisSpacing: 15,
                                     childAspectRatio: 3 / 2,
-                                    mainAxisExtent: 120),
+                                    mainAxisExtent: 100),
                             itemBuilder: (context, index) {
                               return const BrandCard();
                             }),
@@ -100,62 +108,28 @@ class _TabBarScreenState extends State<TabBarScreen> {
                     ],
                   ),
                 ),
-              )
+                bottom: const ETabBar(
+                  tabs: [
+                    Tab(text: 'Sports'),
+                    Tab(text: 'Furniture'),
+                    Tab(text: 'Electronics'),
+                    Tab(text: 'Cloths'),
+                    Tab(text: 'Brand'),
+                  ],
+                ),
+              ),
             ];
           },
-          body: Column(
+          body: const Column(
             children: [
-              TabBar(
-                isScrollable: true,
-                indicatorColor: AppColors.primaryColor,
-                labelColor: AppColors.primaryColor,
-                unselectedLabelColor: Colors.grey,
-                tabs: const [
-                  Tab(text: 'Sports'),
-                  Tab(text: 'Furniture'),
-                  Tab(text: 'Electronics'),
-                  Tab(text: 'Cloths'),
-                  Tab(text: 'Brand'),
-                ],
-              ),
-              const Expanded(
+              Expanded(
                 child: TabBarView(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: [
-                            SportsBrandCard(
-                              BrandImage: 'assets/images/nikeLogo.png',
-                              BrandTitle: 'Nike',
-                              BrandSubTitle: '265 Products',
-                              CategoryImage: 'assets/images/categoryImage.png',
-                            ),
-                            SizedBox(height: 20,),
-                            SportsBrandCard(
-                              BrandImage: 'assets/images/nikeLogo.png',
-                              BrandTitle: 'Adidas',
-                              BrandSubTitle: '265 Products',
-                              CategoryImage: 'assets/images/categoryImage.png',
-                            ),
-                            SizedBox(height: 20,),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text('You might like'),
-                                Text(('View all')),
-                              ],
-                            ),
-                            HomeCategoryList(),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Center(child: Text('Furniture Content')),
-                    Center(child: Text('Electronics Content')),
-                    Center(child: Text('Cloths Content')),
-                    Center(child: Text('Brand Content')),
+                    StoreAllCategoryList(),
+                    StoreAllCategoryList(),
+                    StoreAllCategoryList(),
+                    StoreAllCategoryList(),
+                    StoreAllCategoryList(),
                   ],
                 ),
               ),

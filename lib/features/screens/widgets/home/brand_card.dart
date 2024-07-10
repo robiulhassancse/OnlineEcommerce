@@ -10,9 +10,9 @@ class BrandCard extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(4.0),
           child: Container(
-            height: 100,
+            height: 90,
             width: 200,
             // margin: EdgeInsets.symmetric(horizontal: 16),
             padding: const EdgeInsets.symmetric(horizontal: 12),
