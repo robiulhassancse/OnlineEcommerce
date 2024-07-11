@@ -8,21 +8,21 @@ class EAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.showBackArrow = true,
       this.leadingIcon,
       this.actions,
-      this.leadingOnPressed});
+      this.leadingOnPressed, required this.backgroundColors});
 
   final Widget? title;
   final bool showBackArrow;
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
-
+  final Color backgroundColors;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        scrolledUnderElevation: 0,
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
@@ -33,6 +33,7 @@ class EAppBar extends StatelessWidget implements PreferredSizeWidget {
             : null,
         title: title,
         actions: actions,
+        backgroundColor: backgroundColors,
       ),
     );
   }

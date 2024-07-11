@@ -20,6 +20,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
       length: 5,
       child: Scaffold(
         appBar: EAppBar(
+           backgroundColors: Colors.white,
           showBackArrow: false,
           title: const Text(
             'Store',
@@ -69,7 +70,7 @@ class _TabBarScreenState extends State<TabBarScreen> {
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       const StoreSearchBar(),

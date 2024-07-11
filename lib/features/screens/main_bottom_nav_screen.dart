@@ -4,6 +4,8 @@ import 'package:online_commerce/controller/main_bottom_nav_controller.dart';
 import 'package:online_commerce/features/screens/home_screen.dart';
 import 'package:online_commerce/features/screens/login_screen.dart';
 import 'package:online_commerce/features/screens/tab_bar_screen.dart';
+import 'package:online_commerce/features/screens/widgets/profile_app_bar.dart';
+import 'package:online_commerce/features/screens/profile_screen.dart';
 import 'package:online_commerce/utility/app_color.dart';
 
 class MainBottomNavScreen extends StatefulWidget {
@@ -20,7 +22,7 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
     const HomeScreen(),
     const TabBarScreen(),
     const HomeScreen(),
-    const LoginScreen(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
