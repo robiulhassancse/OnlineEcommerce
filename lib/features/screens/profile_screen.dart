@@ -31,62 +31,108 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     backgroundColors: AppColors.primaryColor,
                     showBackArrow: false,
                   ),
-
-                  ListTile(
-                    leading: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              height: 50,
-                              width: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
-                                  color: Colors.blue,
-                                  image: DecorationImage(
-                                      image: AssetImage(
-                                          'assets/images/image1.jpg'))),
-                            ),
-                            Padding(
-                              padding:
-                              const EdgeInsets.symmetric(horizontal: 16.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Row(
                                 children: [
-                                  Text(
-                                    'Robiul Hassan',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headlineSmall!
-                                        .apply(
-                                      color: Colors.white,
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.black,
+                                      borderRadius: BorderRadius.circular(50),
+                                      image: const DecorationImage(
+                                        image: AssetImage(
+                                          'assets/images/image1.jpg'
+                                        ),
+                                      )
                                     ),
                                   ),
-                                  Text(
-                                    'support@robiul.com',
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .bodyMedium!
-                                        .apply(
-                                      color: Colors.white,
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Robiul Hassan',style: Theme.of(context).textTheme.headlineSmall!.apply(color: Colors.white),),
+                                        Text('support@robiul.com',style: Theme.of(context).textTheme.bodyLarge!.apply(color: Colors.white),),
+                                      ],
                                     ),
-                                  ),
+                                  )
                                 ],
                               ),
-                            )
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(bottom: 32.0),
+                            child: IconButton(onPressed: (){}, icon: const Icon(Icons.edit,size: 30,color: Colors.white,)),
+                          )
+                        ],
+                      ),
                     ),
-                    trailing: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        IconButton(onPressed: (){},icon: Icon(Icons.edit,color: Colors.white,size: 30,),),
-                      ],
-                    ),
-
-                  ),
+                  )
+                  // ListTile(
+                  //   leading: Column(
+                  //     // crossAxisAlignment: CrossAxisAlignment.end,
+                  //     children: [
+                  //       Row(
+                  //         children: [
+                  //           Container(
+                  //             height: 50,
+                  //             width: 50,
+                  //             decoration: BoxDecoration(
+                  //                 borderRadius: BorderRadius.circular(100),
+                  //                 color: Colors.blue,
+                  //                 image: const DecorationImage(
+                  //                     image: AssetImage(
+                  //                         'assets/images/image1.jpg'))),
+                  //           ),
+                  //           // Padding(
+                  //           //   padding:
+                  //           //   const EdgeInsets.symmetric(horizontal: 16.0),
+                  //           //   child: Column(
+                  //           //     crossAxisAlignment: CrossAxisAlignment.start,
+                  //           //     children: [
+                  //           //       Text(
+                  //           //         'Robiul Hassan',
+                  //           //         style: Theme.of(context)
+                  //           //             .textTheme
+                  //           //             .headlineSmall!
+                  //           //             .apply(
+                  //           //           color: Colors.white,
+                  //           //         ),
+                  //           //       ),
+                  //           //       Text(
+                  //           //         'support@robiul.com',
+                  //           //         style: Theme.of(context)
+                  //           //             .textTheme
+                  //           //             .bodyMedium!
+                  //           //             .apply(
+                  //           //           color: Colors.white,
+                  //           //         ),
+                  //           //       ),
+                  //           //     ],
+                  //           //   ),
+                  //           // )
+                  //         ],
+                  //       ),
+                  //     ],
+                  //   ),
+                  //   trailing: Row(
+                  //     mainAxisAlignment: MainAxisAlignment.end,
+                  //     children: [
+                  //       IconButton(onPressed: (){},icon: const Icon(Icons.edit,color: Colors.white,size: 30,),),
+                  //     ],
+                  //   ),
+                  //
+                  // ),
                   // SizedBox(height: 30,),
                 ],
               ),
@@ -97,18 +143,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Account Settings',style: Theme.of(context).textTheme.headlineSmall,),
-                  AccountMenuTile(leadingIcon:(Icons.home_work_sharp), titleText: 'My Address', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.shopping_cart), titleText: 'My Cart', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.shopping_bag_outlined), titleText: 'My Orders', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.food_bank_outlined), titleText: 'Bank Account', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.discount), titleText: 'My Coupons', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.notifications_active), titleText: 'Notifications', subTitleText: 'Set shopping delivery address',),
-                  AccountMenuTile(leadingIcon:(Icons.security), titleText: 'Account Privacy', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.home_work_sharp), titleText: 'My Address', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.shopping_cart), titleText: 'My Cart', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.shopping_bag_outlined), titleText: 'My Orders', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.food_bank_outlined), titleText: 'Bank Account', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.discount), titleText: 'My Coupons', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.notifications_active), titleText: 'Notifications', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.security), titleText: 'Account Privacy', subTitleText: 'Set shopping delivery address',),
 
-                  SizedBox(height: 24,),
+                  const SizedBox(height: 24,),
                   Text('App Settings',style: Theme.of(context).textTheme.headlineSmall,),
-                  AccountMenuTile(leadingIcon:(Icons.upload_file_outlined), titleText: 'Load Data', subTitleText: 'Set shopping delivery address',),
+                  const AccountMenuTile(leadingIcon:(Icons.upload_file_outlined), titleText: 'Load Data', subTitleText: 'Set shopping delivery address',),
 
+                  AccountMenuTile(leadingIcon: Icons.location_on_outlined, titleText: 'Bangladesh', subTitleText: 'Search result is sage for all ages',trailing: Switch(value: false, onChanged: (value){}),),
+                  AccountMenuTile(leadingIcon: Icons.security_outlined, titleText: 'Safe Mode', subTitleText: 'Search result is sage for ages',trailing: Switch(value: false, onChanged: (value){}),),
+                  AccountMenuTile(leadingIcon: Icons.image, titleText: 'HD Image Quality', subTitleText: 'Set Image quality to be seen',trailing: Switch(value: false, onChanged: (value){}),),
 
                 ],
               ),
